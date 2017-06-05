@@ -28,8 +28,9 @@ public class MyScrollview extends ScrollView {
         this.scrollViewListener = scrollViewListener;
     }
 
-    @Override
-    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+
+    // l t 横向/竖向滑动距离
+    @Override protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
         if (scrollViewListener != null) {
             scrollViewListener.onScrollChanged(this, l, t, oldl, oldt);
